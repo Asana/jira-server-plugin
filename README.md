@@ -127,12 +127,13 @@ production Jira Server instance.
 5. Go to the **Adminstration** panel and under **General configuration** set the Base URL to your ngrok alias + 
 “/jira”. For example: http://ac385719247c.ngrok.io/jira
     ![Set Base URL](./assets/-x3cBbRk.png)
-6. Install the Asana for Jira Server plugin
-    
+6. Install the Asana for Jira Server plugin (see [Installing the Plug-in](#installing-the-plug-in) for full instructions)
+
     If you receive an error stating that your “Jira URL isn’t accessible,” return to step 5
 7. Navigate to an Asana project where you would like to install the Asana for Jira Server integration
     1. Click on the drop-down arrow next to your project header
-    2. Select **Add apps**
+    2. Select **Add apps**. If this isn’t an option for you, look to the top right of your project view for a button 
+    called ‘Apps’ or ‘Customize’
     3. Select **_Jira Server_**
     4. You’ll be prompted by a full screen installation wizard
     5. Authorize your Jira Server account
@@ -143,3 +144,51 @@ production Jira Server instance.
 8. A form should load allowing you to fill out the details of a new issue. If this was successful then you’ve correctly
 configured the Asana for Jira Server integration for your local Jira Server instance.
     ![Create new issue](./assets/efxw3b5g.png)
+    
+# Installing the Plug-in
+1. Download the plugin file from this repository. 
+2. Login to Jira Server, and navigate to the Administration section.
+3. Navigate to ‘Manage apps, and click ‘Upload App’
+    ![Upload App](./assets/4ad1a6b7.png)
+4. Use ‘Choose File’ to select the .jar you just downloaded
+5. Once the action is complete, click ‘Configure’ under ‘Asana for Jira Server’
+    ![Configure plugin](./assets/9c488de0.png)
+6. Click ‘Connect to Asana’
+    ![Connect to Asana](./assets/bd1f5df7.png)
+7. This will open an authentication flow. Grant permissions, then select the correct Asana workspace to link to your 
+Server.
+8. You’ll see a success page - Server side configuration is complete, and Asana users can now add the Jira Server 
+integration to projects without further Server Admin support.
+
+# Admin FAQ
+###### Why is this integration not available through the Jira Server Marketplace?
+Given the planned deprecation of Jira Server, we wanted to make the integration available as soon as possible instead 
+of working through marketplace approval. That being said, we are continuing to work with Atlassian, and anticipate 
+being available in the marketplace in early 2021.
+
+##### Can I test this before deploying in my production Server instance?
+Yes - we’ve added instructions above for how we recommend setting up the integration for local testing, but other 
+options are available. Unfortunately, we cannot offer support for this flow beyond what we’ve provided above. 
+
+##### Why does the Jira Server Admin need an Asana account?
+Asana needs to know the exact Server domain, and connecting to Asana from with Jira ensures the integration has the 
+correct destination for requests. 
+
+##### How will I receive and deploy new versions of this integration?
+New versions will be posted here. [Fill out this form](https://form-beta.asana.com?k=rb2W3EqNsfbzJnHeOruicw&d=15793206719)
+if you’d like to be notified when new versions are available.
+
+##### My team doesn’t have the time to handle the Server configuration. Does Asana offer additional support here? 
+Yes - Asana currently works with an external partner who can be contracted for implementation support if required. 
+Please reach out [here](https://asana.com/support) to explore options.
+
+##### Attachments from Asana aren’t appearing in Jira server as expected - why?
+* Currently, only Asana Attachments (where the asset is uploaded directly to Asana) are able to be sent to Jira. Linked 
+files from DropBox, Drive, etc. are not expected to send.
+
+* User permissions must be set for that user to attach files. An easy way to test this is to have the user attempt to 
+add an attachment to a task. If that is the issue, you can update permissions following the 
+[steps in this community thread](https://community.atlassian.com/t5/Questions-for-Confluence/User-permissions-add-attachments/qaq-p/24287).
+
+# Getting further help
+If you have further questions, get in contact with us [here](https://asana.com/support).

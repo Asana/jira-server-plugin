@@ -161,7 +161,7 @@ Server.
 integration to projects without further Server Admin support.
 
 # Admin FAQ
-###### Why is this integration not available through the Jira Server Marketplace?
+##### Why is this integration not available through the Jira Server Marketplace?
 Given the planned deprecation of Jira Server, we wanted to make the integration available as soon as possible instead 
 of working through marketplace approval. That being said, we are continuing to work with Atlassian, and anticipate 
 being available in the marketplace in early 2021.

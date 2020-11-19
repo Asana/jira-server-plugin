@@ -175,7 +175,7 @@ Asana needs to know the exact Server domain, and connecting to Asana from with J
 correct destination for requests. 
 
 ##### How will I receive and deploy new versions of this integration?
-New versions will be posted here. [Fill out this form](https://form-beta.asana.com?k=rb2W3EqNsfbzJnHeOruicw&d=15793206719)
+New versions will be posted in this repository [in the packages section](https://github.com/orgs/Asana/packages?repo_name=jira-server-plugin). [Fill out this form](https://form-beta.asana.com?k=rb2W3EqNsfbzJnHeOruicw&d=15793206719)
 if you’d like to be notified when new versions are available.
 
 ##### My team doesn’t have the time to handle the Server configuration. Does Asana offer additional support here? 
@@ -183,12 +183,14 @@ Yes - Asana currently works with an external partner who can be contracted for i
 Please reach out [here](https://asana.com/support) to explore options.
 
 ##### Attachments from Asana aren’t appearing in Jira server as expected - why?
-* Currently, only Asana Attachments (where the asset is uploaded directly to Asana) are able to be sent to Jira. Linked 
-files from DropBox, Drive, etc. are not expected to send.
+* Currently, only Asana Attachments (where the asset is uploaded directly to Asana) can be fetched and attached to Jira issues. Linked files from Dropbox, Google Drive, etc. are expected to be ignored as they might require additional authorization.
 
 * User permissions must be set for that user to attach files. An easy way to test this is to have the user attempt to 
 add an attachment to a task. If that is the issue, you can update permissions following the 
 [steps in this community thread](https://community.atlassian.com/t5/Questions-for-Confluence/User-permissions-add-attachments/qaq-p/24287).
+
+##### After successful setting up of my Asana Domains the list is not shown on the plugin page. What should I do?
+We are investigation the cause of this but for now there is a workaround: repeat the connection steps for the same domain. It will keep existing Jira issues and their relations to Asana tasks. The list of the connections will appear again.
 
 # Getting further help
 If you have further questions, get in contact with us [here](https://asana.com/support).

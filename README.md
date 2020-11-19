@@ -190,7 +190,7 @@ add an attachment to a task. If that is the issue, you can update permissions fo
 [steps in this community thread](https://community.atlassian.com/t5/Questions-for-Confluence/User-permissions-add-attachments/qaq-p/24287).
 
 ##### After successful setting up of my Asana Domains the list is not shown on the plugin page. What should I do?
-We are investigation the cause of this but for now there is a workaround: repeat the connection steps for the same domain. It will keep existing jira issues and their relations to asana tasks. The list of the connections will appear again.
+We are investigation the cause of this but for now there is a workaround: repeat the connection steps for the same domain. It will keep existing Jira issues and their relations to Asana tasks. The list of the connections will appear again.
 
 # Getting further help
 If you have further questions, get in contact with us [here](https://asana.com/support).

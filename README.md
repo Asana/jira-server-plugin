@@ -183,7 +183,7 @@ Yes - Asana currently works with an external partner who can be contracted for i
 Please reach out [here](https://asana.com/support) to explore options.
 
 ##### Attachments from Asana aren’t appearing in Jira server as expected - why?
-* Currently, only Asana Attachments (where the asset is uploaded directly to Asana) can be fetched and attached to Jira issues. Linked files from DropBox, Drive, etc. are expected to be ignored as they might require additional authorization.
+* Currently, only Asana Attachments (where the asset is uploaded directly to Asana) can be fetched and attached to Jira issues. Linked files from Dropbox, Google Drive, etc. are expected to be ignored as they might require additional authorization.
 
 * User permissions must be set for that user to attach files. An easy way to test this is to have the user attempt to 
 add an attachment to a task. If that is the issue, you can update permissions following the 

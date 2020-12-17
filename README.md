@@ -15,9 +15,14 @@ with the integration:
 Currently, the Asana integration supports the following version of Jira Server: 
 [Jira Server 8.12](https://confluence.atlassian.com/jirasoftwareserver0812)
 
-It is possible that other versions of Jira Server will work with the integration and we do not explicitly restrict the 
+It is possible that other versions of Jira Server will work with the integration, and we do not explicitly restrict the 
 integration from being used with other minor Jira Server 8 versions. However, keep in mind that these are the two 
 versions that we test against and you may experience unexpected issues with other versions.
+
+Here's the list of Jira versions we tested explicitly:
+* 7.13.5
+* 7.13.17
+* 8.12.0
 
 ## 2. Your Jira Server’s Rest API is accessible to the integration via HTTPS
 
@@ -161,6 +166,20 @@ Server.
 integration to projects without further Server Admin support.
 
 # Admin FAQ
+
+##### What kind of authentication is used in Jira-Asana integration?
+There are basically two phases of authentication between your Jira Server and the Asana integration: 
+
+*Initial configuration of your Jira Server*
+During the initial configuration of the integration, a Jira administrator installs the Asana Jira Server plugin, logins to Asana via OAuth2 and selects their Asana workspace. The plugin then makes a series of requests to Asana endpoints. One of these requests uses the administrator's credentials to create an Application Link in your Jira Server. An Application link is a way of registering a shared private/public key pair that allows the 3rd party integrations (like Asana's) to validate and secure requests made to your Jira Server's REST API. If a request is sent to your Jira Server's REST API that doesn't include a key matching one registered with an known Application Link, Jira Server will reject the request. So you can think of this step as performing the initial handshake that lets the Asana integration and Jira Server talk to each other securely. 
+
+*Day to day use with OAuth1*
+Once the initial handshake is performed, the Asana integration can make requests to your Jira Server's REST API, but that doesn't necessarily mean it can now use the API to read or modify data in your Jira Server instance because Jira Server's REST API has it's own user-based authentication model based on OAuth1. This means that while the Asana integration can now reach your Jira Server, users who want to create or read Jira issues from the integration will need to grant the integration access by authenticating using their Jira Server account.
+
+This is done through a standard OAuth1 flow, that Atlassian has documented here (where you can replace "Your client" in the chart provided with "the Asana integration"): https://developer.atlassian.com/server/jira/platform/oauth
+
+As you can see there, when the flow is complete, your Jira Server grants the Asana integration an access token and refresh token scoped to the Jira Server user going through the flow. Each user of the Asana integration will have go through this authentication flow individually. The Asana integration securely stores each user's tokens in its database and uses them to make requests to your Jira Server's REST API on behalf of that authenticated user. So now, after an admin has configured the integration AND the user has authenticated with the integration using their Jira Server account, the user can create and read issues in Jira Server from Asana.
+
 ##### Why is this integration not available through the Jira Server Marketplace?
 Given the planned deprecation of Jira Server, we wanted to make the integration available as soon as possible instead 
 of working through marketplace approval. That being said, we are continuing to work with Atlassian, and anticipate 
@@ -191,6 +210,9 @@ add an attachment to a task. If that is the issue, you can update permissions fo
 
 ##### After successful setting up of my Asana Domains the list is not shown on the plugin page. What should I do?
 We are investigation the cause of this but for now there is a workaround: repeat the connection steps for the same domain. It will keep existing Jira issues and their relations to Asana tasks. The list of the connections will appear again.
+
+##### I have two Jira servers and want to use both of them with the same Asana workspace
+This configuration is not supported at the moment. You can set up only one Jira server with an Asana workspace.
 
 # Getting further help
 If you have further questions, get in contact with us [here](https://asana.com/support).

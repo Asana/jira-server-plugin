@@ -13,7 +13,10 @@ with the integration:
 ## 1. You are using a supported version of Jira Server
 
 Currently, the Asana integration supports the following version of Jira Server: 
-[Jira Server 8.12](https://confluence.atlassian.com/jirasoftwareserver0812)
+* [Jira Server 8.12](https://confluence.atlassian.com/jirasoftwareserver0812)
+* [Jira Server 8.13](https://confluence.atlassian.com/jirasoftwareserver0813)
+* [Jira Server 8.14](https://confluence.atlassian.com/jirasoftwareserver0814)
+* [Jira Server 8.15](https://confluence.atlassian.com/jirasoftwareserver/jira-software-data-center-and-server-8-15-documentation-938845020.html)
 
 It is possible that other versions of Jira Server will work with the integration, and we do not explicitly restrict the 
 integration from being used with other minor Jira Server 8 versions. However, keep in mind that these are the two 
@@ -23,6 +26,10 @@ Here's the list of Jira versions we tested explicitly:
 * 7.13.5
 * 7.13.17
 * 8.12.0
+* 8.12.3
+* 8.13.4
+* 8.14.1
+* 8.15.0
 
 ## 2. Your Jira Server’s Rest API is accessible to the integration via HTTPS
 

@@ -12,24 +12,12 @@ with the integration:
 # Requirements
 ## 1. You are using a supported version of Jira Server
 
-Currently, the Asana integration supports the following version of Jira Server: 
-* [Jira Server 8.12](https://confluence.atlassian.com/jirasoftwareserver0812)
-* [Jira Server 8.13](https://confluence.atlassian.com/jirasoftwareserver0813)
-* [Jira Server 8.14](https://confluence.atlassian.com/jirasoftwareserver0814)
-* [Jira Server 8.15](https://confluence.atlassian.com/jirasoftwareserver/jira-software-data-center-and-server-8-15-documentation-938845020.html)
+Currently, the Asana integration supports the following version of Jira Server: 7.13.5 - 8.21.1.
+* [Jira Software release notes](https://confluence.atlassian.com/jirasoftware/jira-software-release-notes-776821069.html)
 
 It is possible that other versions of Jira Server will work with the integration, and we do not explicitly restrict the 
-integration from being used with other minor Jira Server 8 versions. However, keep in mind that these are the two 
+integration from being used with other Jira Server 8 versions. However, keep in mind that these are the 
 versions that we test against and you may experience unexpected issues with other versions.
-
-Here's the list of Jira versions we tested explicitly:
-* 7.13.5
-* 7.13.17
-* 8.12.0
-* 8.12.3
-* 8.13.4
-* 8.14.1
-* 8.15.0
 
 ## 2. Your Jira Server’s Rest API is accessible to the integration via HTTPS
 
@@ -158,7 +146,7 @@ configured the Asana for Jira Server integration for your local Jira Server inst
     ![Create new issue](./assets/efxw3b5g.png)
     
 # Installing the Plug-in
-1. Download the plugin file from this repository. 
+1. Download the plugin file from [the Atlassian marketplace](https://marketplace.atlassian.com/apps/1223378/asana-for-jira-server?hosting=server&tab=overview) or from this repository.
 2. Login to Jira Server, and navigate to the Administration section.
 3. Navigate to ‘Manage apps, and click ‘Upload App’
     ![Upload App](./assets/4ad1a6b7.png)

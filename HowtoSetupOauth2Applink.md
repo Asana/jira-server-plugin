@@ -34,10 +34,7 @@ of documentation for it.
 - If everything is ok, you would be redirected to a page where the oauth2 process will finish.
 - As a result, the current access and refresh tokens will be stored by the integration.
 - As a user, you should see the screen ![like this](./assets/oauth2-11-successful-example.png).
-
-## What's next?
-
-- You could delete the connection that is stored by the integration, press "Remove" button
+- You could delete the connection that is stored by the integration, press "Remove" button.
 - You could select another Asana workspace and use the same application link credentials if the Jira Server stays the same.
 
 ## What could go wrong?

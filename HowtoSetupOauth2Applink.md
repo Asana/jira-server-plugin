@@ -17,7 +17,7 @@ of documentation for it.
 - ![create link](./assets/oauth2-03-application-link-create.png)
 - ![select incoming type](./assets/oauth2-04-application-link-incoming.png)
 - ![fill the form like this](./assets/oauth2-05-application-link-callback-value.png)
-- `https://jira-api.integrations.asana.plus/setup/callback/jira`
+- Here's the value for the Redirect URL field to copy and paste it: `https://jira-api.integrations.asana.plus/setup/callback/jira`
 - Hit the "Save" button.
 - The resulting page should look ![like this](./assets/oauth2-06-credentials-example.png)
 - Don't close the page yet.

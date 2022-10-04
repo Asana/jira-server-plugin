@@ -39,9 +39,10 @@ following endpoints must be accessible to the integration via HTTPS (where “ba
 - `POST https://<base_url>/asana_auth/create_applink`
 
 If you’d like to specify the Asana integration on an “allow list” so that you can continue to restrict other external 
-traffic to these endpoints, the integration will use the following static IP address:
+traffic to these endpoints, the integration will use the following static public IP address(can be changed, rarely)
+which can be looked up by next DNS record:
 
-- `52.42.159.79`
+- `jira-api-allowedlist.integrations.asana.plus`
 
 ## 3. Your Jira Server’s DNS name resolves to an externally valid IP
 
@@ -144,7 +145,7 @@ production Jira Server instance.
 8. A form should load allowing you to fill out the details of a new issue. If this was successful then you’ve correctly
 configured the Asana for Jira Server integration for your local Jira Server instance.
     ![Create new issue](./assets/efxw3b5g.png)
-    
+
 # Installing the Plug-in
 1. Download the plugin file from [the Atlassian marketplace](https://marketplace.atlassian.com/apps/1223378/asana-for-jira-server?hosting=server&tab=overview) or from this repository and install it by uploading at"Administration"/"Manage apps" (/plugins/servlet/upm) on your Jira Server.
 2. Login to Jira Server, and navigate to the Administration section.

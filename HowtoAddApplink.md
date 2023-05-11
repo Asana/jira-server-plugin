@@ -1,3 +1,6 @@
+### Notes:
+jira-server integration does not support authentication via 3rd party authenticcation services (e.g. okta, microsoft auth...) 
+
 # How to add an application link
 
 Some Jira server instances prohibit the requests that the plugin makes to create application links. In this case they should be created/edited manually:

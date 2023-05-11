@@ -1,3 +1,6 @@
+### Notes:
+jira-server integration does not support authentication via 3rd party authenticcation services (e.g. okta, microsoft auth...) 
+
 # Asana for Jira Server: Admin Guide
 
 Welcome to the Asana for Jira Server Admin Guide! Here we will help you identify if your Jira Server configuration is 

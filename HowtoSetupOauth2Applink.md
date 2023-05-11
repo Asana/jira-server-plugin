@@ -1,3 +1,6 @@
+### Notes:
+jira-server integration does not support authentication via 3rd party authenticcation services (e.g. okta, microsoft auth...) 
+
 # How to set up OAuth2 credentials for Jira Server
 
 Jira Server version 8.22 or [higher supports OAuth2](https://jira.atlassian.com/browse/JRASERVER-43171) for incoming connections.

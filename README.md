@@ -45,7 +45,7 @@ If you’d like to specify the Asana integration on an “allow list” so that 
 traffic to these endpoints, the integration will use the following static public IP address(can be changed, rarely)
 which can be looked up by next DNS record:
 
-- `jira-api-allowedlist.integrations.asana.plus`
+- `jira-api-allowedlist.integrations.asana.plus` (or use 52.89.109.119 static IP)
 
 ## 3. Your Jira Server’s DNS name resolves to an externally valid IP
 
